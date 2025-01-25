@@ -1,7 +1,9 @@
-package com.devzza.basicstatecodelab
+package com.devzza.basicstatecodelab.compose
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.devzza.basicstatecodelab.data.WellnessTasksList
 
 
 /**
@@ -13,5 +15,10 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun WellnessScreen(modifier: Modifier = Modifier) {
-    WaterCounter(modifier)
+    Column(modifier = modifier) {
+
+        StatefulCounter()
+        WellnessTasksList()
+    }
+
 }
