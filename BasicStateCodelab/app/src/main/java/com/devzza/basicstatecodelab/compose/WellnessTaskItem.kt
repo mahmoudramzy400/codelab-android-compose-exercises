@@ -17,6 +17,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.devzza.basicstatecodelab.data.WellnessTask
 
 
 /**
@@ -25,21 +26,7 @@ import androidx.compose.ui.unit.dp
  * Date: --------- 25/01/2025
  */
 
-@Composable
-fun WellnessTaskItem(
-    taskName: String,
-    modifier: Modifier = Modifier
-) {
-    var checkedState by rememberSaveable  { mutableStateOf(false) }
 
-    WellnessTaskItem(
-        taskName = taskName,
-        checked = checkedState,
-        onCheckedChange = { newValue -> checkedState = newValue },
-        onClose = {},
-        modifier = modifier
-    )
-}
 
 @Composable
 fun WellnessTaskItem(
